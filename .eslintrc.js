@@ -2,6 +2,7 @@
 
 module.exports = {
   root: true,
+  parser: 'vue-eslint-parser',
   parserOptions: {
     parser: 'babel-eslint',
     ecmaVersion: 2017,
@@ -12,14 +13,13 @@ module.exports = {
   },
   // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
   // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-  extends: ['plugin:vue/essential', 'eslint:recommended', 'plugin:prettier/recommended'],
+  extends: ['prettier', 'plugin:vue/essential'],
   // required to lint *.vue files
-  plugins: ['vue', 'prettier'],
+  plugins: ['prettier'],
   // add your custom rules here
   rules: {
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'prettier/prettier': ['error'],
-    'no-console': 0,
+    'prettier/prettier': ['warn'],
   },
 };
