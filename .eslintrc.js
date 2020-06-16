@@ -14,11 +14,12 @@ module.exports = {
   // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
   extends: ['plugin:vue/essential', 'eslint:recommended', 'plugin:prettier/recommended'],
   // required to lint *.vue files
-  plugins: ['vue','prettier'],
+  plugins: ['vue', 'prettier'],
   // add your custom rules here
   rules: {
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'prettier/prettier': ['error'],
+    'no-console': 0,
   },
 };
