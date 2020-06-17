@@ -7,8 +7,8 @@
 	"scripts": {
 		"dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
 		"start": "npm run dev",
-    "lint": "eslint --ext .js,.vue src",
-    "postinstall": "cp .hooks/* .git/hooks/",
+		"lint": "eslint --ext .js,.vue src",
+		"postinstall": "cp .hooks/* .git/hooks/",
 		"format": "prettier --write '{src,config,mock}/**/*.{js,json,vue,less}'",
 		"build": "node build/build.js"
 	},
@@ -61,6 +61,7 @@
 		"postcss-import": "^11.0.0",
 		"postcss-loader": "^2.0.8",
 		"postcss-url": "^7.2.1",
+		"pre-commit": "^1.2.2",
 		"prettier": "^2.0.5",
 		"rimraf": "^2.6.0",
 		"semver": "^5.3.0",
